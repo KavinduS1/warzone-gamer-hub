@@ -8,32 +8,23 @@
   :root {
     --background: 0 0% 7%;
     --foreground: 0 0% 98%;
-
     --card: 0 0% 3%;
     --card-foreground: 0 0% 98%;
-
     --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
-
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
-
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.9%;
-
     --radius: 0.5rem;
   }
 }
@@ -43,13 +34,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-gaming-dark text-gray-100 font-['Inter'];
-    background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=2000&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-    background-color: rgba(18, 18, 18, 0.92);
+    @apply bg-gaming-dark text-gray-100 font-['Inter'] overflow-x-hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-['Rajdhani'] font-bold;
@@ -76,4 +61,31 @@
 
 .glass-effect {
   @apply bg-gaming-gray/70 backdrop-blur-sm border border-white/10;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-base {
+  transform: translateZ(0);
+}
+
+.parallax-back {
+  transform: translateZ(-1px) scale(2);
 }
