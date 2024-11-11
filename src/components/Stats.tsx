@@ -9,10 +9,10 @@ interface StatItemProps {
 }
 
 const StatItem = ({ icon, label, value, suffix = "" }: StatItemProps) => (
-  <div className="flex flex-col items-center p-4 bg-gaming-gray rounded-lg animate-fade-up">
-    <div className="text-gaming-red mb-2">{icon}</div>
-    <div className="text-3xl font-bold mb-1">{value}{suffix}</div>
-    <div className="text-gray-400 text-sm">{label}</div>
+  <div className="glass-effect flex flex-col items-center p-8 rounded-lg animate-fade-up hover:scale-105 transition-transform">
+    <div className="text-gaming-red mb-4">{icon}</div>
+    <div className="text-4xl font-bold mb-2 glow-text">{value}{suffix}</div>
+    <div className="text-gray-400 text-sm uppercase tracking-wider">{label}</div>
   </div>
 );
 
@@ -26,22 +26,22 @@ const Stats = () => {
   return (
     <div className="stats-grid">
       <StatItem
-        icon={<Trophy size={24} />}
+        icon={<Trophy size={32} />}
         label="Wins"
         value={animated ? 342 : 0}
       />
       <StatItem
-        icon={<Crosshair size={24} />}
+        icon={<Crosshair size={32} />}
         label="K/D Ratio"
         value={animated ? 2.45 : 0}
       />
       <StatItem
-        icon={<Timer size={24} />}
+        icon={<Timer size={32} />}
         label="Hours Played"
         value={animated ? 1200 : 0}
       />
       <StatItem
-        icon={<Users size={24} />}
+        icon={<Users size={32} />}
         label="Squad Wins"
         value={animated ? 156 : 0}
       />

@@ -44,6 +44,12 @@
   }
   body {
     @apply bg-gaming-dark text-gray-100 font-['Inter'];
+    background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(18, 18, 18, 0.92);
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-['Rajdhani'] font-bold;
@@ -53,13 +59,21 @@
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .highlight-card {
-  @apply relative overflow-hidden rounded-lg bg-gaming-gray p-4 transition-all hover:scale-105;
+  @apply relative overflow-hidden rounded-lg bg-gaming-gray/80 backdrop-blur-sm p-6 transition-all hover:scale-105 hover:bg-gaming-gray border border-gaming-red/20;
 }
 
 .social-icon {
-  @apply text-gray-400 hover:text-gaming-red transition-colors;
+  @apply text-gray-400 hover:text-gaming-red transition-colors transform hover:scale-110;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+}
+
+.glass-effect {
+  @apply bg-gaming-gray/70 backdrop-blur-sm border border-white/10;
 }
